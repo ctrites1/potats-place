@@ -29,3 +29,7 @@ header {
     color: white;
   }
 }
+
+.window {
+  width: 20rem;
+}
