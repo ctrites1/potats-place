@@ -1,8 +1,32 @@
 /* Custom Font */
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("assets/fonts/PixelifySans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 800;
+  font-display: swap;
+}
 
 :root {
   --bg-purple: #4b2572;
+  --bg-light-purple: #cc96f2;
+  --bg-blue: #969df1;
+  --rounded: 12px;
 }
 
 body {
@@ -32,16 +56,60 @@ header {
 
 main {
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: row;
+  padding: 4rem 3rem;
+  gap: 1rem;
 }
 
 .sidebar {
   flex: 1;
-  background: #cc96f2;
+  background: var(--bg-light-purple);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  align-items: center;
+  font-family: "JetBrains Mono";
+  border-radius: var(--rounded);
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .navItemsContainer {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    .navItem {
+      text-align: center;
+      padding: 4px 0;
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .linksContainer {
+    border: 1px solid;
+  }
+
+  .musicContainer {
+    border: 1px solid;
+  }
 }
 
 .content {
-  flex: 3;
+  flex: 5;
+  background: var(--bg-blue);
+  border-radius: var(--rounded);
 }
