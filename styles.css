@@ -90,12 +90,12 @@ header {
     text-decoration: none;
   }
 
-  .navItemsContainer {
+  .nav-items-container {
     padding: 0;
     align-items: center;
     justify-content: center;
 
-    .navItem {
+    .nav-item {
       text-align: center;
       padding: 4px 0;
       a {
@@ -104,29 +104,27 @@ header {
     }
   }
 
-  .musicContainer {
-    border: 1px solid;
+  .music-container {
     padding: 0.5rem;
   }
 
-  .linksContainer {
-    border: 1px solid;
+  .links-container {
     padding: 0.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     width: 100%;
 
-    a {
+    .site-badge {
       justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 6rem;
+      }
     }
   }
-}
-
-.content {
-  grid-column: 6 / span 10;
-  background: var(--bg-blue);
-  border-radius: var(--rounded);
 }
 
 @keyframes grow-and-shrink {
@@ -156,5 +154,34 @@ header {
 
   &:hover > .sparkle {
     opacity: 1;
+  }
+}
+
+.content {
+  grid-column: 6 / span 10;
+  background: var(--bg-blue);
+  border-radius: var(--rounded);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .latest-container {
+    padding: 0.5rem;
+
+    .post-container {
+      border: 1px solid;
+    }
+  }
+
+  .other-stuff {
+    display: flex;
+    flex-direction: row;
   }
 }
