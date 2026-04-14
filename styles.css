@@ -25,10 +25,11 @@
 }
 
 :root {
-  --bg-purple: #4b2572;
+  --bg-purple: #663399;
   --bg-light-purple: #cc96f2;
   --bg-blue: #969df1;
   --rounded: 12px;
+  --star-default-color: #94ffeb;
 }
 
 body {
@@ -74,7 +75,6 @@ header {
   border-radius: var(--rounded);
   position: sticky;
   gap: 0.5rem;
-  shrink: 0;
 
   h1 {
     font-size: 1.5rem;
@@ -127,4 +127,34 @@ header {
   grid-column: 6 / span 10;
   background: var(--bg-blue);
   border-radius: var(--rounded);
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.sparkles-wrapper {
+  .sparkle {
+    animation: grow-and-shrink 600ms ease-in-out infinite;
+    transform: translate(-50%, -50%);
+    -webkit-mask: url("assets/images/star.svg") center / contain no-repeat;
+    mask: url("assets/images/star.svg") center / contain no-repeat;
+    background: oklch(
+      from var(--star-default-color) l calc(c * 1.8) calc(72 * (var(--i) - 1))
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover > .sparkle {
+    opacity: 1;
+  }
 }
