@@ -25,11 +25,14 @@
 }
 
 :root {
+  /* Colours */
   --bg-purple: #663399;
   --bg-light-purple: #cc96f2;
   --bg-blue: #969df1;
+  --accent-turquoise: #96f2ef;
+  --star-default-color: #96f2ef;
+  /* Other */
   --rounded: 12px;
-  --star-default-color: #94ffeb;
 }
 
 body {
