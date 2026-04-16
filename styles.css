@@ -84,10 +84,37 @@ header {
   ul {
     list-style-type: none;
     padding: 0;
-  }
 
-  a {
-    text-decoration: none;
+    li {
+      border-bottom: 1px dotted white;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        transform: translate(0.1rem, -0.2rem);
+        font-weight: 600;
+        a {
+          background: linear-gradient(
+            90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(0, 212, 255, 1) 25%,
+            rgba(2, 0, 36, 1) 50%,
+            rgba(0, 212, 255, 1) 75%,
+            rgba(2, 0, 36, 1) 100%
+          );
+          background-size: 200% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+          animation: gradient-shift 1s linear infinite;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+    }
   }
 
   .nav-items-container {
@@ -124,6 +151,15 @@ header {
         width: 6rem;
       }
     }
+  }
+}
+
+@keyframes gradient-shift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
   }
 }
 
