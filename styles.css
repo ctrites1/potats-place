@@ -84,9 +84,15 @@ h1 {
   animation: 2s gradient-border linear infinite;
 }
 
+.card {
+  background-color: var(--bg-dark);
+  border: solid 2px var(--bg-purple);
+  color: white;
+}
+
 .sidebar {
   grid-column: 2 / span 3;
-  background: var(--bg-light-purple);
+  background: var(--bg-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,15 +101,12 @@ h1 {
   padding: 0.5rem;
 
   h1 {
-    background-color: var(--bg-dark);
     border: solid 2px var(--bg-purple);
-    color: white;
     text-align: center;
     margin: 0.25rem 0 0;
   }
 
   .nav-items-container {
-    background-color: var(--bg-dark);
     border: solid 2px var(--bg-purple);
     align-items: center;
     justify-content: center;
@@ -148,15 +151,9 @@ h1 {
 
   .music-container {
     padding: 0.5rem;
-    background-color: var(--bg-dark);
-    border: solid 2px var(--bg-purple);
-    color: white;
   }
 
   .inspo-container {
-    background-color: var(--bg-dark);
-    border: solid 2px var(--bg-purple);
-    color: white;
     display: grid;
     padding: 0.5rem 0rem;
     grid-template-columns: repeat(2, 1fr);
@@ -169,7 +166,7 @@ h1 {
       justify-content: center;
       align-items: center;
       img {
-        width: 6rem;
+        width: 4.5rem;
       }
     }
   }
@@ -207,9 +204,6 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    border: solid 2px var(--bg-purple);
-    background: var(--bg-dark);
-    color: white;
     padding: 0 1rem;
 
     h1 {
@@ -219,29 +213,13 @@ h1 {
 
   .latest-container {
     padding: 1rem 0.5rem;
-    border: solid 2px var(--bg-purple);
-    background: var(--bg-dark);
     justify-content: center;
     align-items: center;
 
     .sleepy-bo {
       height: 20rem;
       width: 20rem;
-      background-image:
-      /* linear-gradient( */
-      /*   darkred, */
-      /*   red, */
-      /*   darkorange, */
-      /*   yellow, */
-      /*   lime, */
-      /*   teal, */
-      /*   blue, */
-      /*   darkblue, */
-      /*   indigo, */
-      /*   purple */
-      /* ), */
-      /* linear-gradient(white),  */ url(assets/images/sleepy-bo.png);
-      /* background-blend-mode: color, saturation; */
+      background-image: url(assets/images/sleepy-bo.png);
       background-size: auto 100%;
       background-repeat: no-repeat;
       animation: translate-spin 4s linear infinite;
