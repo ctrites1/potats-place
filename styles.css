@@ -45,10 +45,13 @@ header {
   padding: 0;
   background: var(--bg-purple);
   h1 {
-    color: white;
-    text-align: center;
-    font-family: "Super Pixel";
-    font-size: 2.5rem;
+    a {
+      text-align: center;
+      font-family: "Super Pixel";
+      font-size: 2.5rem;
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
@@ -100,6 +103,11 @@ h1 {
   gap: 0.5rem;
   padding: 0.5rem;
 
+  > * {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   h1 {
     border: solid 2px var(--bg-purple);
     text-align: center;
@@ -150,7 +158,10 @@ h1 {
   }
 
   .music-container {
-    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
   }
 
   .inspo-container {
@@ -211,7 +222,7 @@ h1 {
     }
   }
 
-  .latest-container {
+  .bo-container {
     padding: 1rem 0.5rem;
     justify-content: center;
     align-items: center;
