@@ -13,6 +13,4 @@ async function getJsonData(path) {
   }
 }
 
-const posts = getJsonData("../posts.json");
-
-const contentContainer = document.querySelector(".content");
+export const posts = await getJsonData("../posts.json");
