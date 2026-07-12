@@ -174,11 +174,20 @@ h1 {
   }
 
   .inspo-container {
-    display: grid;
-    padding: 0.5rem 0rem;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      margin: 0.5rem;
+    }
+    div {
+      display: grid;
+      padding: 0.5rem 0rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      width: 100%;
+    }
 
     .site-badge {
       justify-self: center;
@@ -246,6 +255,12 @@ h1 {
     }
   }
 
+  &#main-posts {
+    h2 {
+      padding: 0 0.5rem;
+    }
+  }
+
   .blog-post {
     display: flex;
     flex-direction: column;
@@ -265,7 +280,6 @@ h1 {
       }
     }
   }
-
   .other-stuff {
     display: flex;
     flex-direction: row;
