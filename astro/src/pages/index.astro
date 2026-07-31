@@ -1,17 +1,26 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import posts from "../data/posts.json";
+import PostCard from "../components/PostCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="content rainbow-border">
+    <div class="welcome-container card">
+      <h1>Welcome to Potat's Place!</h1>
+      <p>
+        This is my site for things related to my wonderful Trio of bunnies, dev
+        and ballroom dance and miscellaneous stuff. I couldn't decide on one
+        thing so it's just *gestures vaguely at self* everything.
+      </p>
+    </div>
+    <div class="bo-container card">
+      <div class="sleepy-bo"></div>
+    </div>
+  </div>
+  <div class="content rainbow-border" id="main-posts">
+    <h2>Posts</h2>
+    {posts.length === 0 && <p>No Posts Yet!</p>}
+    {posts.toReversed().map((post) => <PostCard post={post} />)}
+  </div>
+</Layout>

@@ -1,0 +1,12 @@
+---
+const { post } = Astro.props;
+---
+
+<article class="blog-post card">
+  <div class="blog-header">
+    <h2>{post.title}</h2>
+    <p>{post.date}</p>
+  </div>
+  <div class="divider-horizontal"></div>
+  {post.content.map((part) => <p>{part}</p>)}
+</article>

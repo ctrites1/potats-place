@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PostCard from "../components/PostCard.astro";
+import posts from "../data/posts.json";
+
+const trioPosts = posts.filter((p) => p.page === "Trio");
+---
+
+<Layout>
+  <div class="content rainbow-border">
+    {trioPosts.length === 0 && <p>No Posts Yet!</p>}
+    {trioPosts.map((post) => <PostCard post={post} />)}
+  </div>
+</Layout>
