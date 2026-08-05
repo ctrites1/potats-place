@@ -14,3 +14,5 @@ This site is my contribution to the Web Revival.
 ## Status
 
 **It's very much under construction right now...**
+
+... But I just updated to using Astro!
