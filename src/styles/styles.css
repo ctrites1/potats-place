@@ -1,22 +1,22 @@
 /* Custom Font */
-@font-face {
-  font-family: "Pixelify Sans";
-  src: url("assets/fonts/PixelifySans-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Super Pixel";
-  src: url("assets/fonts/SuperPixel.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Pixelated Elegance";
-  src: url("assets/fonts/PixelatedEleganceRegular.ttf") format("truetype");
-  font-display: swap;
-}
+/* @font-face { */
+/*   font-family: "Pixelify Sans"; */
+/*   src: url("assets/fonts/PixelifySans-VariableFont_wght.ttf") format("truetype"); */
+/*   font-weight: 400 700; */
+/*   font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*   font-family: "Super Pixel"; */
+/*   src: url("assets/fonts/SuperPixel.ttf") format("truetype"); */
+/*   font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*   font-family: "Pixelated Elegance"; */
+/*   src: url("assets/fonts/PixelatedEleganceRegular.ttf") format("truetype"); */
+/*   font-display: swap; */
+/* } */
 
 :root {
   --bg-dark: oklch(0.1233 0.0483 303.63);
@@ -38,7 +38,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Pixelify Sans";
+  font-family: var(--font-pixelify-sans);
 }
 
 header {
@@ -49,7 +49,7 @@ header {
   h1 {
     a {
       text-align: center;
-      font-family: "Super Pixel";
+      font-family: var(--font-super-pixel);
       font-size: 2.5rem;
       color: white;
       text-decoration: none;
@@ -58,7 +58,7 @@ header {
 }
 
 h1 {
-  font-family: "Pixelated Elegance";
+  font-family: var(--font-pixelated-elegance);
   font-size: 22px;
 }
 
@@ -122,7 +122,7 @@ h1 {
     border: solid 2px var(--bg-purple);
     text-align: center;
     margin: 0.25rem 0 0;
-    font-size: 300;
+    font-weight: 300;
   }
 
   .nav-items-container {
@@ -204,11 +204,13 @@ h1 {
 }
 
 .sparkles-wrapper {
+  position: relative;
+
   .sparkle {
     animation: grow-and-shrink 600ms ease-in-out infinite;
     transform: translate(-50%, -50%);
-    -webkit-mask: url("assets/images/star.svg") center / contain no-repeat;
-    mask: url("assets/images/star.svg") center / contain no-repeat;
+    -webkit-mask: url("../assets/images/star.svg") center / contain no-repeat;
+    mask: url("../assets/images/star.svg") center / contain no-repeat;
     background: oklch(
       from var(--star-default-color) l calc(c * 1.8) calc(72 * (var(--i) - 1))
     );
@@ -250,7 +252,7 @@ h1 {
     .sleepy-bo {
       height: 20rem;
       width: 20rem;
-      background-image: url(assets/images/sleepy-bo.png);
+      background-image: url(../assets/images/sleepy-bo.png);
       background-size: auto 100%;
       background-repeat: no-repeat;
       animation: translate-spin 4s linear infinite;

@@ -34,3 +34,8 @@ function sparkleInstance(container, index) {
   container.appendChild(el);
   return el;
 }
+
+const container = document.querySelector(".sparkles-wrapper");
+if (container) {
+  for (let i = 0; i < 5; i++) sparkleInstance(container, i);
+}

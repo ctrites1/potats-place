@@ -1,29 +1,26 @@
 ---
 import "../styles/styles.css";
+import { Font, Image } from "astro:assets";
+import nomnomnami from "../assets/images/nomnomnami_badge.gif";
+import blamensir from "../assets/images/blamensir-badge.png";
+import reigenmoe from "../assets/images/reigenmoe-badge.gif";
 ---
 
 <html lang="en">
   <head>
+    <Font cssVariable="--font-pixelated-elegance" />
+    <Font cssVariable="--font-super-pixel" />
+    <Font cssVariable="--font-pixelify-sans" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Potat's Place</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>
+      import "../scripts/sparkles.js";
+    </script>
   </head>
   <body>
     <header class="rainbow-border">
@@ -42,13 +39,13 @@ import "../styles/styles.css";
           <h2>~ Site Inspo ~</h2>
           <div>
             <a class="site-badge" href="https://nomnomnami.com/">
-              <img src="assets/images/nomnomnami_badge.gif" alt="nomnomnami" />
+              <Image src={nomnomnami} alt="nomnomnami badge" />
             </a>
             <a class="site-badge" href="https://reigen.moe/home">
-              <img src="assets/images/reigenmoe-badge.gif" />
+              <Image src={reigenmoe} alt="reigenmoe badge" />
             </a>
             <a class="site-badge" href="https://blamensir.neocities.org/">
-              <img src="assets/images/blamensir-badge.png" />
+              <Image src={blamensir} alt="blamensir badge" />
             </a>
           </div>
         </div>
